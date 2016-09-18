@@ -20,10 +20,12 @@ describe('generator-django-environ:app', function () {
       'requirements/base.txt',
       'requirements/test.txt',
       'requirements/prod.txt',
+      'locale/.gitkeep',
       'hello/__init__.py',
       'hello/settings/__init__.py',
       'hello/settings/base.py',
       'hello/settings/dev.py',
+      'hello/settings/test.py',
       'hello/settings/prod.py',
       'hello/urls.py'
     ]);

@@ -22,7 +22,6 @@ module.exports = yeoman.Base.extend({
     }];
 
     return this.prompt(prompts).then(function (props) {
-      // To access props later use this.props.someAnswer;
       this.props = props;
     }.bind(this));
   },
@@ -34,6 +33,7 @@ module.exports = yeoman.Base.extend({
 
     this.fs.write(appDir + '/__init__.py', '');
     this.fs.write(appDir + '/settings/__init__.py', '');
+    this.fs.write(this.destinationPath('locale/.gitkeep'), '');
 
     const filesToCopy = [
       ['manage.py', 'manage.py'],
@@ -47,6 +47,7 @@ module.exports = yeoman.Base.extend({
       ['requirements/test.txt', 'requirements/test.txt'],
       ['settings/base.py', this.props.appName + '/settings/base.py'],
       ['settings/dev.py', this.props.appName + '/settings/dev.py'],
+      ['settings/prod.py', this.props.appName + '/settings/test.py'],
       ['settings/prod.py', this.props.appName + '/settings/prod.py'],
       ['urls.py', this.props.appName + '/urls.py'],
       ['wsgi.py', this.props.appName + '/wsgi.py']
@@ -61,7 +62,5 @@ module.exports = yeoman.Base.extend({
     });
   },
 
-  install: function () {
-    this.installDependencies();
-  }
+  install: function () {}
 });
