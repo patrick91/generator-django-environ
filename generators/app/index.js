@@ -7,7 +7,6 @@ var mkdirp = require('mkdirp');
 
 var foldername = path.basename(process.cwd());
 
-
 module.exports = yeoman.Base.extend({
   prompting: function () {
     // Have Yeoman greet the user.
