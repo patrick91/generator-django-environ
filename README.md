@@ -16,12 +16,43 @@ Then generate your new project:
 yo django-environ
 ```
 
-## Getting To Know Yeoman
+## Project structure
 
- * Yeoman has a heart of gold.
- * Yeoman is a person with feelings and opinions, but is very easy to work with.
- * Yeoman can be too opinionated at times but is easily convinced not to be.
- * Feel free to [learn more about Yeoman](http://yeoman.io/).
+This project uses [django environ](https://github.com/joke2k/django-environ) to handle the project settings. The project will have 4
+settings files:
+
+- base.py
+
+  `base.py` holds the shared configuration.
+
+- dev.py
+
+  `dev.py` should be used during development.
+
+- test.py
+
+  `test.py` is used when running the tests with `py.test`.
+
+- prod.py
+
+  `prod.py` is used as default settings file. It has only one required setting at the moment, the `SECRET_KEY`
+
+
+### Specifying settings
+
+In order to use the development setttings file, you should set the **DJANGO\_SETTINGS\_MODULE**.
+You can do this in two ways. one is to set it as an environ variable, the other way is to
+create an `.env` file with the setting.
+
+```
+DJANGO_SETTINGS_MODULE=myapp.settings.dev
+```
+
+You can use this file to specify all the other settings:
+
+- DEBUG
+- ALLOWED_HOSTS
+- SECRET_KEY
 
 ## License
 

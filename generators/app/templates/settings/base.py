@@ -5,9 +5,6 @@ root = environ.Path(__file__) - 3 # three folder back (/a/b/c/ - 3 = /)
 
 env = environ.Env(
     DEBUG=(bool, False),
-    CORS_ORIGIN_ALLOW_ALL=(bool, False),
-    CORS_ALLOW_CREDENTIALS=(bool, False),
-    CORS_ORIGIN_WHITELIST=(list, []),
     ALLOWED_HOSTS=(list, []),
 )
 
