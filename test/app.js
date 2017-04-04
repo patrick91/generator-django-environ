@@ -15,6 +15,7 @@ describe('generator-django-environ:app', function () {
       'manage.py',
       '.env.sample',
       '.gitignore',
+      '.editorconfig',
       'pytest.ini',
       'requirements.txt',
       'requirements/base.txt',

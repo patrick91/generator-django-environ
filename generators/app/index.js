@@ -38,6 +38,7 @@ module.exports = yeoman.Base.extend({
       ['manage.py', 'manage.py'],
       ['env.sample', '.env.sample'],
       ['gitignore', '.gitignore'],
+      ['editorconfig', '.editorconfig'],
       ['pytest.ini', 'pytest.ini'],
       ['requirements.txt', 'requirements.txt'],
       ['requirements/base.txt', 'requirements/base.txt'],
